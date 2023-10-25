@@ -14,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException{
         String[] str = br.readLine().split("");
-
+        StringBuilder sb = new StringBuilder();
         int T = Integer.parseInt(br.readLine());
         Map<String,int[]> alpList = new HashMap<>();
         for(int t = 0 ; t < T ; t++){
@@ -34,9 +34,9 @@ public class Main {
                 }
                 alpList.put(target,arr);
             }
-            System.out.println(arr[end] - (start == 0 ? 0 : arr[start-1]));
+            sb.append(arr[end] - (start == 0 ? 0 : arr[start-1])).append("\n");
         }
 
-
+        System.out.println(sb.toString().trim());
     }
 }
