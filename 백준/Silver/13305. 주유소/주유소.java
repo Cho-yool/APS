@@ -9,11 +9,11 @@ public class Main {
     public static void main(String[] args) throws IOException{
         int N = Integer.parseInt(br.readLine());
 
-        int[] path = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        int[] oil = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        long[] path = Arrays.stream(br.readLine().split(" ")).mapToLong(Long::parseLong).toArray();
+        long[] oil = Arrays.stream(br.readLine().split(" ")).mapToLong(Long::parseLong).toArray();
 
-        int cur = 0;
-        int cost = 0;
+        long cur = 0;
+        long cost = 0;
 
         for(int i = 0 ; i < N-1; i++){
 //            System.out.println(i + " : cur = " + cur + " cost = " + cost);
