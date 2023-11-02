@@ -49,15 +49,24 @@ public class Main {
         }
         arr.sort(null);
         int rank = 1;
-        for(int i = 1; i < N;i++){
+        if(arr.get(0).no == K){
+            sb.append(1).append("\n");
+        }else{
+
+            for(int i = 1; i < N;i++){
+//            System.out.println(arr.get(i).no);
 //            System.out.println(arr.get(i).compareTo(arr.get(i-1)));
-            if(arr.get(i).compareTo(arr.get(i-1)) > 0){
-                rank++;
-            }
-            if(K == arr.get(i).no){
-                System.out.println(rank);
+
+                if(arr.get(i).compareTo(arr.get(i-1)) > 0){
+                    rank = i+1;
+                }
+                if(K == arr.get(i).no){
+                    sb.append(rank).append("\n");
+                    break;
+                }
             }
         }
+        System.out.print(sb);
     }
 
 }
